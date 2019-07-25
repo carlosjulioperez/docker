@@ -10,4 +10,7 @@ LABEL org.label-schema.schema-version="1.0" \
 EXPOSE 80
 EXPOSE 8080
 
+RUN yum -y update && \
+yum -y install vim lsof wget tree screen man man-pages postgresql postgresql-server postgresql-contrib
+
 CMD ["/bin/bash"]
