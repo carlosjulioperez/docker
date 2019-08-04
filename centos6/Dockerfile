@@ -2,6 +2,14 @@
 # https://www.andreagrandi.it/2015/02/21/how-to-create-a-docker-image-for-postgresql-and-persist-data/
 # https://serverfault.com/questions/720967/how-to-run-postgresql-on-centos-within-docker
 
+# $ docker build -t centos .
+# $ docker run -d -p 5432:5432 centos
+# $ docker ps
+# $ docker inspect 7a1e1a80e948 | grep -i ipaddress
+# $ psql -h 172.17.0.2 -U dockeruser -d dockerdb
+
+# docker run -t -i centos /bin/bash
+
 FROM centos:centos6
 MAINTAINER The CentOS Project <cloud-ops@centos.org>
 
